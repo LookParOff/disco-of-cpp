@@ -1,12 +1,10 @@
 // task3.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
 #include <iostream>
 #include "header_for_task3.h"
 
 int main()
 {
-
     std::cout << exercise1(10, 2) << std::endl;
 	std::cout << exercise1(10, 16) << std::endl;
 	std::cout << exercise1(10, 10) << std::endl;
