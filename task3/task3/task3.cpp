@@ -5,11 +5,7 @@
 
 int main()
 {
-    std::cout << exercise1(10, 2) << std::endl;
-	std::cout << exercise1(10, 16) << std::endl;
-	std::cout << exercise1(10, 10) << std::endl;
-	std::cout << exercise1(3, 3) << std::endl;
-	std::cout << exercise1(20, 20) << std::endl;
+	return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
