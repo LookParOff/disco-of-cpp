@@ -14,17 +14,17 @@ public:
 	const int& getNum();
 	const int& getDenum();
 
-	std::ostream& operator<<(std::ostream& stream);
-	std::istream& operator>>(std::istream& stream);
-
-	Ration operator+=(Ration fraction);
-	Ration operator*=(Ration fraction);
-	friend Ration operator+(Ration fraction, Ration fr);
-	friend Ration operator*(Ration fraction, Ration fr);
+	friend std::istream& operator>>(std::istream& stream, Ration &rat);
+	friend std::ostream& operator<<(std::ostream& stream, Ration &rat);
+	
+	Ration operator+=(Ration& fraction);
+	Ration operator*=(Ration& fraction);
+	friend Ration operator+(Ration& fr);
+	friend Ration operator*(Ration& fr);
 	Ration operator-();
 	
-	bool operator==(Ration fr);
-	bool operator>(Ration fr);
+	bool operator==(Ration& fr);
+	bool operator>(Ration& fr);
 
 	operator double();
 };

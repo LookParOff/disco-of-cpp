@@ -34,24 +34,24 @@ const int& Ration::getDenum()
 	return ret;
 }
 
-std::ostream& Ration::operator<<(std::ostream& stream)
+//std::ostream& operator<<(std::ostream& stream, Ration& rat)
+//{
+	//stream << rat.getNum << " / " << rat.getDenum;
+//}
+
+std::istream& operator>>(std::istream& stream, Ration& rat)
 {
-	stream << _num << " / " << _denum;
+	//stream >> rat.getNum >> _denum;	// мб нужно будет сохранять из istream в лок переменную и её кинуть в _num
 }
 
-std::istream& Ration::operator>>(std::istream& stream)
-{
-	stream >> _num >> _denum;	// мб нужно будет сохранять из istream в лок переменную и её кинуть в _num
-}
-
-Ration Ration::operator+=(Ration fraction)
+Ration Ration::operator+=(Ration& fraction)
 {
 	_num += fraction.getNum;
 	_denum += fraction.getDenum;
 	//return Ration(_num + fraction.getNum, _denum + fraction.getDenum);
 }
 
-Ration Ration::operator*=(Ration fraction)
+Ration Ration::operator*=(Ration& fraction)
 {
 	return Ration(_num * fraction.getNum, _denum * fraction.getDenum);
 }
@@ -71,7 +71,7 @@ Ration operator*(Ration fraction, Ration fr)
 	return Ration(fraction.getNum * fr.getNum, fraction.getDenum * fr.getDenum);
 }
 
-bool Ration::operator==(Ration fr)
+bool Ration::operator==(Ration& fr)
 {
 	if (_num == fr.getNum() && _denum == fr.getDenum())
 	{
@@ -80,7 +80,7 @@ bool Ration::operator==(Ration fr)
 	return false;
 }
 
-bool Ration::operator>(Ration fr)
+bool Ration::operator>(Ration& fr)
 {
 	if (_num > fr.getNum() && _denum > fr.getDenum())
 	{
