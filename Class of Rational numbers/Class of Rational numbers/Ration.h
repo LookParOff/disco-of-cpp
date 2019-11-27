@@ -6,6 +6,9 @@ private:
 
 	int _num;
 	int _denum;
+
+	int _nod();
+	int _nok();
 public:
 	Ration();
 	Ration(int num, int denum);
