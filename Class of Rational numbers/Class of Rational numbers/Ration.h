@@ -17,10 +17,10 @@ public:
 	friend std::istream& operator>>(std::istream& stream, Ration &rat);
 	friend std::ostream& operator<<(std::ostream& stream, Ration &rat);
 	
-	Ration operator+=(Ration& fraction);
-	Ration operator*=(Ration& fraction);
-	friend Ration operator+(Ration& fr);
-	friend Ration operator*(Ration& fr);
+	void operator+=(Ration& fraction);
+	void operator*=(Ration& fraction);
+	Ration operator+(Ration& fr);
+	Ration operator*(Ration& fr);
 	Ration operator-();
 	
 	bool operator==(Ration& fr);
