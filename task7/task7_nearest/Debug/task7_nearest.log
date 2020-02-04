@@ -1,0 +1,3 @@
+﻿  task7_nearest.cpp
+C:\Users\nalukov\Source\Repos\task7\task7_nearest\task7_nearest.cpp(12,11): warning C4244: =: преобразование "const int" в "float", возможна потеря данных
+  task7_nearest.vcxproj -> C:\Users\nalukov\Source\Repos\task7\Debug\task7_nearest.exe
